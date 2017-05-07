@@ -11,6 +11,7 @@ red: #DE5B49 rgba(222,91,73,1)
 body {
     padding: 50px;
     font-family: 'Inconsolata', monospace;
+    text-decoration: none;
 }
 
 h1 {

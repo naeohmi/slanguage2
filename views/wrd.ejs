@@ -11,14 +11,14 @@
         </h2>
         <div id="word-box">
             <ul>
-                <h2>
-                    <span class="edit">edit &#10084;</span>
-                    <span class="delete">delete &#10008;</span>
-                </h2>
-                <li data-id=<%=data.id%>>
-                    <h3> Urban Dictionary Definition One: </h3>
-                    <p><input class="input_item" type="text" name="urbandef1" value="<%= data.urbandef1 %>" readonly></p>
-                </li>
+                <div class="each-def">
+                    <li data-id=<%=data.id%>>
+                        <h3> Urban Dictionary Definition One: </h3>
+                        <input class="input_item" type="text" name="urbandef1" value="<%= data.urbandef1 %>">
+                        <button class="edit" type="button">click to save edits &#10084;</button>
+                        <button class="destroy" type="button">click to delete &#10008;</button>
+                    </li>
+                </div>
                 <li>
                     <h3> Urban Dictionary Definition Two: </h3>
                     <p>

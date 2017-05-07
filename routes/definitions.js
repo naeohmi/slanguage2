@@ -31,8 +31,8 @@ let grabUrbanDefs = (word) => {
         console.log(urbanDef1);
 
         config.db.none(
-            "INSERT INTO defs (inputId, word, urbanDef1, urbanDef2, urbanSent1, urbanSent2)" +
-            "VALUES ($1, $2, $3, $4, $5, $6);", [4, word, urbanDef1, urbanDef2, urbanSent1, urbanSent2]
+            "INSERT INTO defs (word, urbanDef1, urbanDef2, urbanSent1, urbanSent2)" +
+            "VALUES ($1, $2, $3, $4, $5);", [word, urbanDef1, urbanDef2, urbanSent1, urbanSent2]
         )
     });
 };
@@ -93,11 +93,11 @@ class CRUD {
     destroyWord(req, res, next) {
         let wordId = parseInt(req.params.id);
         config.db.result('DELETE from defs WHERE id = $1;', wordId)
-            .then((result) => {
+            .then((item) => {
                 res.status(200)
                     .json({
                         status: 'success',
-                        message: `Removed ${result.rowCount} word`
+                        message: `Removed ${item} word`
                     });
             })
             .catch((err) => {

@@ -17,7 +17,7 @@ router.get('/words', (req, res, next) => {
 });
 
 router.get('/words/:id', api.readOne);
-router.put('/words/:id', api.update);
+router.patch('/words/:id', api.update);
 router.delete('/words/:id', api.destroy);
 
 module.exports = router;
