@@ -20,7 +20,7 @@ $('.edit').on('click', function() {
 $('.input_item').on('change', () => {
     let id = parseInt($(this).parent().attr('data-id'))
     let val = $(this).val();
-    axios.patch("http://localhost:3000/" + id, {
+    axios.patch("https://slanguage2.herokuapp.com/words/" + id, {
         val: val,
         id: id
     }).catch((err) => {
