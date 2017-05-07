@@ -1,15 +1,26 @@
 console.log('main.js is working')
 
-$('.delete').on('click', function() {
-    let id = $(this).parent().attr('data-id')
-    axios.delete("http://localhost:3000/" + id)
-    $(this).parent().remove();
-})
+let delItem = () => {
+    let id = this.parentNode.getAttribute('data-id');
+    axios.delete("http://localhost:3000/" + id);
+    this.parentNode.parentNode.removeChild(this.parentNode);
+};
+
+let addDel = () => {
+    let delbuttons = document.querySelectorAll('.delete');
+    // let delbuttons = document.getElementsByClassName('delete');
+    // console.log(delbuttons);
+    for (let i = 0; i < delbuttons.length; i++) {
+        delbuttons[i].addEventListener('click', delItem);
+    };
+};
+addDel();
 
 $('.edit').on('click', function() {
     $(this).prev().removeAttr('readonly')
     $(this).prev().focus();
-})
+});
+
 $('.input_item').on('change', function() {
     let id = parseInt($(this).parent().attr('data-id'))
     let val = $(this).val();
@@ -20,4 +31,4 @@ $('.input_item').on('change', function() {
     }).catch(function(err) {
         return next(err);
     });
-})
+});

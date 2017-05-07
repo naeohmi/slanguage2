@@ -5,25 +5,19 @@
     <body>
         <h1>
             <%= title %>
-                <!--squids and flounders lol-->
         </h1>
         <h2>
-            <%= subtitle %>
+            <%= data.word %>
         </h2>
         <div id="word-box">
             <ul>
                 <h2>
-                    <a href="/words/<%= data.id %>">
-                        Word: <br /></a>
-                    <a href="">&#10084;</a>
-                    <%= data.word %>
-                        <!--<a href="">&#10008;</a>-->
+                    <span class="edit">edit &#10084;</span>
+                    <span class="delete">delete &#10008;</span>
                 </h2>
-                <li>
+                <li data-id=<%=data.id%>>
                     <h3> Urban Dictionary Definition One: </h3>
-                    <p>
-                        <%= data.urbandef1 %>
-                    </p>
+                    <p><input class="input_item" type="text" name="urbandef1" value="<%= data.urbandef1 %>" readonly></p>
                 </li>
                 <li>
                     <h3> Urban Dictionary Definition Two: </h3>
