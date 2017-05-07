@@ -1,20 +1,6 @@
 console.log('main.js is working')
 
-// let delItem = () => {
-//     let id = this.parentNode.getAttribute('data-id');
-//     axios.delete("http://localhost:3000/" + id);
-//     this.parentNode.parentNode.removeChild(this.parentNode);
-// };
-// let addDel = () => {
-//     let delbuttons = document.querySelectorAll('.delete');
-//     // let delbuttons = document.getElementsByClassName('delete');
-//     // console.log(delbuttons);
-//     for (let i = 0; i < delbuttons.length; i++) {
-//         delbuttons[i].addEventListener('click', delItem);
-//     };
-// };
-// addDel();
-$('.edit').on('click', function() {
+$('.edit').on('click', () => {
     $(this).prev().focus();
 });
 $('.input_item').on('change', () => {
@@ -32,8 +18,11 @@ $('.input_item').on('change', () => {
 //     axios.delete("http://localhost:3000/" + words + "/" + id)
 //     $(this).parent().remove();
 // });
-const destroy = document.querySelector('.destroy');
-destroy.addEventListener('click', () => {
-    destroy.setAttribute('class', 'clicked');
-    destroy.parentNode.innerHTML = '';
+const destroy = document.querySelectorAll('.destroy');
+destroy.forEach((el, index) => {
+    el.addEventListener('click', () => {
+        let id = el.getAttribute('id');
+        el.parentNode.removeChild(el.parentNode);
+        axios.delete("https://slanguage2.herokuapp.com/words/" + id)
+    })
 });
