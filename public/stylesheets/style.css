@@ -87,6 +87,7 @@ h1 {
     text-align: center;
     background-color: rgba(240, 202, 77, .6);
     text-decoration: none;
+    flex: 1;
 }
 
 #word-box:hover {
