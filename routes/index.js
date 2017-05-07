@@ -18,6 +18,10 @@ router.get('/words', (req, res, next) => {
 
 router.get('/words/:id', api.readOne);
 router.patch('/words/:id', api.update);
-router.delete('/words/:id', api.destroy);
+router.delete('/words/:id', (req, res, next) => {
+    if (document.querySelector('.clicked')) {
+        api.destroy;
+    };
+});
 
 module.exports = router;

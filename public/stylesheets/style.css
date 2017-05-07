@@ -71,12 +71,22 @@ h1 {
     border: 2px solid white;
 }
 
+#word-box-cont {
+    display: flex;
+    display: inline-block;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
 #word-box {
-    box-sizing: border-box;
     border: 2px solid black;
     transition: 1s;
     text-align: center;
     background-color: rgba(240, 202, 77, .6);
+    text-decoration: none;
 }
 
 #word-box:hover {

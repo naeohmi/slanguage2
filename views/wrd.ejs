@@ -14,29 +14,41 @@
                 <div class="each-def">
                     <li data-id=<%=data.id%>>
                         <h3> Urban Dictionary Definition One: </h3>
+                        <button class="edit" type="button">save edit &#10084;</button>
                         <input class="input_item" type="text" name="urbandef1" value="<%= data.urbandef1 %>">
-                        <button class="edit" type="button">click to save edits &#10084;</button>
-                        <button class="destroy" type="button">click to delete &#10008;</button>
+                        <button class="destroy" type="button">delete &#10008;</button>
                     </li>
                 </div>
-                <li>
-                    <h3> Urban Dictionary Definition Two: </h3>
-                    <p>
-                        <%= data.urbandef2 %>
-                    </p>
-                </li>
-                <li>
-                    <h3> Urban Dictionary Example Sentence One: </h3>
-                    <p>
-                        <%= data.urbansent1 %>
-                    </p>
-                </li>
-                <li>
-                    <h3> Urban Dictionary Example Sentence Two: </h3>
-                    <p>
-                        <%= data.urbansent2 %>
-                    </p>
-                </li>
+
+                <div class="each-def">
+                    <li data-id=<%=data.id%>>
+                        <h3> Urban Dictionary Definition Two: </h3>
+                        <button class="edit" type="button">save edit &#10084;</button>
+                        <input class="input_item" type="text" name="urbandef1" value="<%= data.urbandef2 %>">
+                        <button class="destroy" type="button">delete &#10008;</button>
+                    </li>
+                </div>
+
+
+                <div class="each-def">
+                    <li data-id=<%=data.id%>>
+                        <h3> Urban Dictionary Example Sentence One: </h3>
+                        <button class="edit" type="button">save edit &#10084;</button>
+                        <input class="input_item" type="text" name="urbandef1" value="<%= data.urbansent1 %>">
+                        <button class="destroy" type="button">delete &#10008;</button>
+                    </li>
+                </div>
+
+
+                <div class="each-def">
+                    <li data-id=<%=data.id%>>
+                        <h3> Urban Dictionary Example Sentence Two: </h3>
+                        <button class="edit" type="button">save edit &#10084;</button>
+                        <input class="input_item" type="text" name="urbandef1" value="<%= data.urbansent2 %>">
+                        <button class="destroy" type="button">delete &#10008;</button>
+                    </li>
+                </div>
+
             </ul>
         </div>
         <div class='video-container'>

@@ -14,10 +14,9 @@ console.log('main.js is working')
 //     };
 // };
 // addDel();
-// $('.edit').on('click', function() {
-//     $(this).prev().removeAttr('readonly')
-//     $(this).prev().focus();
-// });
+$('.edit').on('click', function() {
+    $(this).prev().focus();
+});
 $('.input_item').on('change', () => {
     let id = parseInt($(this).parent().attr('data-id'))
     let val = $(this).val();
@@ -28,12 +27,13 @@ $('.input_item').on('change', () => {
         return next(err);
     });
 });
-$('.destroy').on('click', () => {
-    let id = $(this).parent().attr('data-id')
-    axios.delete("http://localhost:3000/" + id)
-    $(this).parent().remove();
-});
-const update = document.querySelector('.edit');
-update.addEventListener('click', (event) => {
-    $(this).prev().focus();
+// $('.destroy').on('click', () => {
+//     let id = $(this).parent().attr('data-id')
+//     axios.delete("http://localhost:3000/" + words + "/" + id)
+//     $(this).parent().remove();
+// });
+const destroy = document.querySelector('.destroy');
+destroy.addEventListener('click', () => {
+    destroy.setAttribute('class', 'clicked');
+    destroy.parentNode.innerHTML = '';
 });
