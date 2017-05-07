@@ -23,21 +23,20 @@
                     <h2>
                         <a href="/words/<%= data.id %>">Word: </a>
                         <br />
-                        <a href="">&#10084;</a>
-                        <%= data.word %>
-                            <a href="/words/de/<%= data.id %>">&#10008;</a>
+                        <span class="edit">edit &#10084;</span>
+
+                        <a href="/words/de/<%= data.id %>">
+                            <%= data.word %>
+                        </a>
+                        <span class="delete">delete &#10008;</span>
                     </h2>
-                    <li>
+                    <li data-id=<%=data.id%>>
                         <h3> Urban Dictionary Definition One: </h3>
-                        <p>
-                            <%= data.urbandef1 %>
-                        </p>
+                        <p><input class="input_item" type="text" name="urbandef1" value="<%= data.urbandef1 %>" readonly></p>
                     </li>
-                    <li>
+                    <li data-id=<%=data.id%>>
                         <h3> Urban Dictionary Definition Two: </h3>
-                        <p>
-                            <%= data.urbandef2 %>
-                        </p>
+                        <p><input class="input_item" type="text" name="urbandef2" value="<%= data.urbandef2 %>" readonly></p>
                     </li>
                     <li>
                         <h3> Urban Dictionary Example Sentence One: </h3>
