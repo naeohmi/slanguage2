@@ -73,7 +73,7 @@ h1 {
 
 #word-box-cont {
     display: flex;
-    display: inline-block;
+    /*display: inline-block;*/
     flex-direction: row;
     flex-wrap: wrap-reverse;
     justify-content: space-around;
