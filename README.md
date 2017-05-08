@@ -5,11 +5,15 @@ An app to help people learn English slang, to communicate effectively with nativ
 
 (live at: https://slanguage2.herokuapp.com/)
 
-## Wireframes
+![homescreen](public/images/slanguage.png)
+
+## Wireframes and Project Management 
 ----------
 
-![image of first wire-frame]
-(./public/images/first-frame.jpg)
+![wireframe](public/images/first-frame.jpg)
+
+![trello](public/images/trello.png)
+
 
 ## User Stories
 ------------
@@ -18,8 +22,8 @@ As a user, I want to send text messages to my friends who speak English as a nat
 ## Pseudocode and visual representation of database
 ----------
 
-![image of second wire-frame]
-(./public/images/second-frame.jpg)
+![Pseudocode](public/images/second-frame.jpg)
+
 
 ## Technologies used
 -----------
@@ -42,3 +46,5 @@ As a user, I want to send text messages to my friends who speak English as a nat
 5. Run nodemon, and app should be available on localhost:3000
 
 ## Live Heroku Deployment at https://slanguage2.herokuapp.com/
+
+![live-example](public/images/slanguage2.png)
