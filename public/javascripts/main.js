@@ -1,5 +1,3 @@
-console.log('main.js is working')
-
 $('.edit').on('click', () => {
     $(this).prev().focus();
 });
@@ -8,7 +6,7 @@ $('.destroy').on('click', () => {
     let id = $(this).parent().attr('data-id')
     axios.delete("https://slanguage2.herokuapp.com/words/" + id)
     $(this).parent().remove();
-    location.reload();
+    // location.reload();
 });
 
 $('.input_item').on('change', () => {
@@ -21,7 +19,7 @@ $('.input_item').on('change', () => {
     }).catch((err) => {
         return next(err);
     });
-    location.reload();
+    // location.reload();
 });
 
 

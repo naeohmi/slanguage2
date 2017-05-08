@@ -23,9 +23,3 @@ CREATE TABLE defs (
 
 INSERT INTO defs (inputId, word, urbanDef1, urbanDef2, urbanSent1, urbanSent2) 
  VALUES (1, 'word', 'urbanDef1', 'urbanDef2', 'urbanSent1', 'urbanSent2');
- 
--- DROP VIEW IF EXISTS together;
--- CREATE VIEW together
-
--- AS SELECT * FROM input, defs
--- WHERE (input.id = defs.inputId);

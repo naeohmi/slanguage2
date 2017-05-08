@@ -2,7 +2,6 @@ var config = require('../models/config.js');
 
 let getWord = (req, res, next) => {
     var inputWord = req.query.word;
-    // var wordArray = inputWord.split(' ');
     config.db.none(
             "INSERT INTO input (word)" +
             "VALUES ($1);", [inputWord]
@@ -18,11 +17,11 @@ let getWord = (req, res, next) => {
 };
 
 let grabUrbanDefs = (word) => {
-    console.log('urban defs has awoken!');
+    // console.log('urban defs has awoken!');
     config.axios.get(`http://api.urbandictionary.com/v0/define?term=${word}`)
 
     .then((res) => {
-        console.log('urban awoke!');
+        // console.log('urban awoke!');
 
         var urbanDef1 = res.data.list[0].definition;
         var urbanSent1 = res.data.list[0].example;
@@ -108,7 +107,6 @@ class CRUD {
 };
 let crudy = new CRUD();
 
-//CRUD
 module.exports = {
     getWord: getWord, //GET
     readAll: crudy.allWords, //READ
