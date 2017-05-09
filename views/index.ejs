@@ -17,12 +17,9 @@
                 <input id="toDefine" type="text" name="word" placeholder="enter a word">
                 <input type="submit" class="clickdis">
 
-                <% data.forEach(function(data){ %>
-                    <a href="/words/<%= data.id %>">
-                        <% }); %>
-
-                            <input class="clickdis" type="button" value="definitions" />
-                    </a>
+                <a href="/words">
+                    <input class="clickdis" type="button" value="definitions" />
+                </a>
             </form>
         </div>
         <div id="defs">
