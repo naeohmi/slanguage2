@@ -8,12 +8,6 @@ red: #DE5B49 rgba(222,91,73,1)
 */
 
 @import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700|Love+Ya+Like+A+Sister');
-body {
-    padding: 50px;
-    font-family: 'Inconsolata', monospace;
-    text-decoration: none;
-}
-
 h1 {
     font-family: 'Love Ya Like A Sister', cursive;
     color: white;
@@ -73,16 +67,16 @@ h1 {
 
 #word-box-cont {
     display: flex;
-    /*display: inline-block;*/
-    /*flex-direction: row;*/
-    flex-flow: row-reverse wrap;
+    display: inline-block;
+    flex-direction: row;
+    /*flex-flow: row-reverse wrap;*/
     justify-content: space-around;
     align-items: center;
     align-content: center;
     height: 400px;
-    width: 700px;
+    width: 400px;
     text-decoration: none;
-    border: 2px solid black;
+    flex-flow: row-reverse wrap-reverse;
 }
 
 #word-box {
@@ -91,10 +85,12 @@ h1 {
     background-color: rgba(240, 202, 77, .6);
     text-decoration: none;
     flex: 1 0 100px;
+    border: 2px solid black;
 }
 
 #word-box:hover {
-    box-shadow: 10px 10px 5px #888888;
+    box-shadow: 15px 15px 15px white;
+    background-color: rgba(240, 202, 77, .8);
 }
 
 h2 {
@@ -115,7 +111,7 @@ h2 a {
 }
 
 a:hover {
-    color: red;
+    color: white;
 }
 
 h3 {
