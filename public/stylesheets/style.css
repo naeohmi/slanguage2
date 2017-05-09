@@ -73,12 +73,15 @@ h1 {
 
 #word-box-cont {
     display: flex;
-    /*display: inline-block;*/
-    flex-direction: row;
+    display: inline-block;
+    /*flex-direction: row;*/
     flex-wrap: wrap-reverse;
     justify-content: space-around;
     align-items: center;
     align-content: center;
+    height: 500px;
+    width: 300px;
+    text-decoration: none;
 }
 
 #word-box {
@@ -102,6 +105,7 @@ h2 {
     background-color: rgba(227, 123, 64, .8);
     color: black;
     text-align: center;
+    text-decoration: none;
 }
 
 h2 a {

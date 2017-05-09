@@ -23,3 +23,4 @@ CREATE TABLE defs (
 
 INSERT INTO defs (inputId, word, urbanDef1, urbanDef2, urbanSent1, urbanSent2) 
  VALUES (1, 'word', 'urbanDef1', 'urbanDef2', 'urbanSent1', 'urbanSent2');
+ 
