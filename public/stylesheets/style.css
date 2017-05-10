@@ -68,15 +68,15 @@ h1 {
 #word-box-cont {
     display: flex;
     display: inline-block;
-    flex-direction: row;
+    /*flex-direction: row-reverse;*/
     /*flex-flow: row-reverse wrap;*/
     justify-content: space-around;
     align-items: center;
     align-content: center;
-    height: 400px;
-    width: 400px;
+    height: 95%;
+    width: 95%;
     text-decoration: none;
-    flex-flow: row-reverse wrap-reverse;
+    /*flex-flow: row-reverse wrap-reverse;*/
 }
 
 #word-box {
@@ -104,7 +104,13 @@ h2 {
     text-decoration: none;
 }
 
-h2 a {
+h2 {
+    text-decoration: none;
+    transition: 1s;
+    color: black;
+}
+
+a {
     text-decoration: none;
     transition: 1s;
     color: black;

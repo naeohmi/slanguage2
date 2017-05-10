@@ -21,8 +21,6 @@ let grabUrbanDefs = (word) => {
     config.axios.get(`http://api.urbandictionary.com/v0/define?term=${word}`)
 
     .then((res) => {
-        // console.log('urban awoke!');
-
         var urbanDef1 = res.data.list[0].definition;
         var urbanSent1 = res.data.list[0].example;
         var urbanDef2 = res.data.list[1].definition;
@@ -35,13 +33,13 @@ let grabUrbanDefs = (word) => {
         )
     });
 };
-
 class CRUD {
     constructor() {}
 
     allWords(req, res, next) {
         config.db.any('SELECT * FROM defs;')
             .then((data) => {
+                // data = data.reverse();
                 res.status(200)
                     .render('words', {
                         status: 'success',
@@ -54,7 +52,6 @@ class CRUD {
                 return next(err);
             });
     };
-
     oneWord(req, res, next) {
         let wordId = parseInt(req.params.id);
         config.db.one('SELECT * FROM defs WHERE id = $1;', wordId)
@@ -73,12 +70,11 @@ class CRUD {
 
     updateWord(req, res, next) {
         config.db.none(
-            `UPDATE defs SET urbanDef1=$1, urbanDef2=$2, urbanSent1=$3, urbanSent2=$4 WHERE id=$5);`,
+                `UPDATE defs SET urbanDef1=$1, urbanDef2=$2, urbanSent1=$3, urbanSent2=$4 WHERE id=$5);`,
 
-            [req.body.urbanDef1, req.body.urbanDef2, req.body.urbanSent1, req.body.urbanSent2, parseInt(req.params.id)]
-        )
-
-        .then(() => {
+                [req.body.urbanDef1, req.body.urbanDef2, req.body.urbanSent1, req.body.urbanSent2, parseInt(req.params.id)]
+            )
+            .then(() => {
                 res.status(200)
                     .json({
                         status: 'success',
@@ -88,7 +84,6 @@ class CRUD {
                 return next(err);
             });
     };
-
     destroyWord(req, res, next) {
         let wordId = parseInt(req.params.id);
         config.db.result('DELETE from defs WHERE id = $1;', wordId)
@@ -103,7 +98,6 @@ class CRUD {
                 return next(err);
             });
     };
-
 };
 let crudy = new CRUD();
 
