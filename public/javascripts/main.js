@@ -39,7 +39,8 @@ destroy.addEventListener('click', () => {
     // el.addEventListener('click', () => {
     // let id = el.getAttribute('id');
     // el.parentNode.removeChild(el.parentNode);
-    axios.delete("https://slanguage2.herokuapp.com/words/" + id)
+    // axios.delete("https://slanguage2.herokuapp.com/words/" + id)
+    axios.delete(this);
 })
 
 // $('.destroy').on('click', () => {
