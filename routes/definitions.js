@@ -17,7 +17,6 @@ let getWord = (req, res, next) => {
 };
 
 let grabUrbanDefs = (word) => {
-    // console.log('urban defs has awoken!');
     config.axios.get(`http://api.urbandictionary.com/v0/define?term=${word}`)
 
     .then((res) => {
